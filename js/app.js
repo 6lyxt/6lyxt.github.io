@@ -17,10 +17,41 @@ function playMusic() {
     })
 }
 
+
+let iTitle = 0;
+let speedTitle = 500;
+let title = '6lyxt';
+
+let iDesc = 0;
+let speedDesc = 250;
+let desc = 'wannabe haxxor & web developer';
+
+function typeWriterTitle() {
+    if (iTitle < title.length) {
+        document.getElementById('title').innerHTML += title.charAt(iTitle);
+        iTitle++;
+        setTimeout(typeWriterTitle, speedTitle);
+    }
+}
+
+function typeWriterDesc() {
+    if (iDesc < desc.length) {
+        document.getElementById('desc').innerHTML += desc.charAt(iDesc);
+        iDesc++;
+        setTimeout(typeWriterDesc, speedDesc);
+    }
+}
+
 var intervalID = window.setInterval(randomText, 10000);
 
 function randomText(){
-    var strs = ['whats up?', 'step aside or get wet' , 'kush kein haze' , 'tilidin in meinem blut', 'eyes red', 'switche auf die fast lane', 'fuck sleep !', 'cold dreams & dirty sprite', 'fsociety', 'fuckthepopulation', 'fuck love', 'lost and tired'];
+    var strs = ['whats up?', 'darlin!' , 'weaklings die, big deal.' , 'tilidin in meinem blut', 'eyes red', 'switche auf die fast lane', 'fuck sleep !', 'cold dreams & dirty sprite', 'hab all meine sorgen in all den drogen vergraben', 'fuckthepopulation', 'fuck love', 'lost and tired'];
     var randomStr = strs[Math.floor(Math.random() * strs.length)];
     document.getElementById('rawry').innerText = randomStr;
+}
+
+window.onload = () => {
+    typeWriterTitle();
+    typeWriterDesc();
+    randomText();
 }
