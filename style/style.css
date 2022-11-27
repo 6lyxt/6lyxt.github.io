@@ -2,6 +2,7 @@
 
 body {
 	margin: 0;
+	background-color: #000;
 }
 
 ::selection {
@@ -41,7 +42,7 @@ video {
 	filter: brightness(30%) blur(2px);
 	position: fixed;
 	min-height: 100%;
-	min-width: 120%;
+	/* min-width: 120%; */
 	z-index: -100;
 	transform: translate(-50%, -50%)
 }
