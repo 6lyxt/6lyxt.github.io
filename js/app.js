@@ -24,7 +24,7 @@ let title = '6lyxt';
 
 let iDesc = 0;
 let speedDesc = 250;
-let desc = 'wannabe haxxor & web developer';
+let desc = 'web developer';
 
 function typeWriterTitle() {
     if (iTitle < title.length) {
@@ -45,7 +45,7 @@ function typeWriterDesc() {
 var intervalID = window.setInterval(randomText, 10000);
 
 function randomText(){
-    var strs = ['whats up?', 'weaklings die, big deal.' , 'tilidin in meinem blut', 'eyes red', 'switche auf die fast lane', 'fuck sleep !', 'cold dreams & dirty sprite', 'hab all meine sorgen in all den drogen vergraben', 'fuckthepopulation', 'fuck love', 'lost and tired', 'shes sharp like a needle', 'red eyes all over me'];
+    var strs = ['founder & backend dev @ zap/', 'web dev @ cic ebusiness/', 'check out my github!']  
     var randomStr = strs[Math.floor(Math.random() * strs.length)];
     document.getElementById('rawry').innerText = randomStr;
 }
