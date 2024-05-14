@@ -18,13 +18,13 @@ const App = () => {
         <Container>
             <div className={'centered'}>
                 <div className={'cur-date'}>{getDate()}</div>
-                <BrowserRouter>
+                <HashRouter>
                     <Routes>
                         <Route path="/" element={<Start/>}/>
                         <Route path="/me" element={<Me/>}/>
                         <Route path="/work" element={<Work/>}/>
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
                 <Navigation/>
             </div>
         </Container>
