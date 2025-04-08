@@ -5,6 +5,7 @@ const Navigation = () => {
                 <li><a href={'#/'}>home</a></li>
                 <li><a href={'#/me'}>me</a></li>
                 <li><a href={'#/work'}>work</a></li>
+                <li><a href={'#/skills'}>skilltree</a></li>
             </ul>
         </nav>
     )

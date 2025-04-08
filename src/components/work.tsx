@@ -1,23 +1,27 @@
 import React, {useEffect, useState} from "react";
-import {Col, Row} from "react-bootstrap";
+import LoadingSpinner from "./loading";
 
 const WorkComponent = () => {
 
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.github.com/users/6lyxt/repos?sort=updated&direction=desc&per_page=4").then(res => {
-            return res.json();
-        }).then(data => {
-            setProjects(data);
-        })
+        // timeout to show off my cool self written loading spinner
+        setTimeout(() => {
+            fetch("https://api.github.com/users/6lyxt/repos?sort=updated&direction=desc&per_page=4").then(res => {
+                return res.json();
+            }).then(data => {
+                setProjects(data);
+            })
+        }, 300)
     }, [])
 
     return (
         <>
-            <h1>recent work (latest github projects)</h1>
+            <h1 className={'mb-2'}>recent work (latest github projects)</h1>
             <ul>
-                {projects.map((project: any) => {
+                {projects.length === 0 ? <LoadingSpinner /> :
+                projects.map((project: any) => {
                     return (
                         <li key={project.id} className={'mb-3'}>
                             <a href={project.html_url}><b>{project.name}</b></a><br/>

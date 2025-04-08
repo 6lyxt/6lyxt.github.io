@@ -4,25 +4,35 @@ import {Container} from "react-bootstrap";
 import Navigation from "./nav";
 import Me from "./me";
 import Work from "./work";
+import Skills from "./skills";
 
 const App = () => {
     const getDate = () => {
-        const date = new Date();
-        const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
-        const month = date.getMonth() < 10 ? `0${date.getMonth()}` : date.getMonth();
-        const year = date.getFullYear();
-        return `${day}.${month}.${year}`;
+        return new Date()
+            .toLocaleDateString("de-DE", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+            })
+            .replace(/\//g, ".")
     }
 
     return (
         <Container>
             <div className={'centered'}>
-                <div className={'cur-date'}>{getDate()}</div>
+                <div className={'cur-date'}>
+                    <a href={'https://github.com/6lyxt'} target={'_blank'}>
+                        <img src={'https://github.com/6lyxt.png?size=75'} className={'github-avatar me-1'}
+                             alt={'github avatar'}/>
+                    </a>
+                    {getDate()}
+                </div>
                 <HashRouter>
                     <Routes>
                         <Route path="/" element={<Start/>}/>
                         <Route path="/me" element={<Me/>}/>
                         <Route path="/work" element={<Work/>}/>
+                        <Route path="/skills" element={<Skills/>}/>
                     </Routes>
                 </HashRouter>
                 <Navigation/>
