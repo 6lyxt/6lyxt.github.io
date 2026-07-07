@@ -6,7 +6,7 @@ const MeComponent = () => {
                 backend & software development. <i>Cars</i> are also the thing im most interested in, besides clean &
                 functional code, of course :) </p>
             <p>As of today (<i>07.04.25</i>), im a software developer @ <a href={'https://cic.at'}
-                                                                           target={'_blank'}>cic</a> - a full-service
+                                                                           target={'_blank'} rel={'noreferrer'}>cic</a> - a full-service
                 agency based in austria, linz - building e-commerce services, landing pages, erp-system implementations,
                 mobile apps & much more - check us out!</p>
             <p>I usually spend my free-time playing games on <a

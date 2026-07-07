@@ -1,10 +1,11 @@
-import {BrowserRouter, HashRouter, Route, Router, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import Start from "./start";
 import {Container} from "react-bootstrap";
 import Navigation from "./nav";
 import Me from "./me";
 import Work from "./work";
 import Skills from "./skills";
+import ProjectsComponent from "./projects";
 
 const App = () => {
     const getDate = () => {
@@ -21,7 +22,7 @@ const App = () => {
         <Container>
             <div className={'centered'}>
                 <div className={'cur-date'}>
-                    <a href={'https://github.com/6lyxt'} target={'_blank'}>
+                    <a href={'https://github.com/6lyxt'} target={'_blank'} rel={'noreferrer'}>
                         <img src={'https://github.com/6lyxt.png?size=75'} className={'github-avatar me-1'}
                              alt={'github avatar'}/>
                     </a>
@@ -33,9 +34,10 @@ const App = () => {
                         <Route path="/me" element={<Me/>}/>
                         <Route path="/work" element={<Work/>}/>
                         <Route path="/skills" element={<Skills/>}/>
+                        <Route path="/projects" element={<ProjectsComponent/>}/>
                     </Routes>
+                    <Navigation/>
                 </HashRouter>
-                <Navigation/>
             </div>
         </Container>
     )

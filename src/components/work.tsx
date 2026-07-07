@@ -26,13 +26,15 @@ const WorkComponent = () => {
                         <li key={project.id} className={'mb-3'}>
                             <a href={project.html_url}><b>{project.name}</b></a><br/>
                             <span>{project.description}</span><br/>
-                            <span className={'border-bottom'}>{project.language}</span>
+                            {project.language && (
+                                <span className={'tag mt-2 d-inline-flex'}>{project.language}</span>
+                            )}
                         </li>
                     )
                 })}
             </ul>
             <p>you can checkout all my projects <u><a href={'https://github.com/6lyxt'}
-                                                      target={'_blank'}>here</a></u>
+                                                      target={'_blank'} rel={'noreferrer'}>here</a></u>
             </p>
         </>
     )

@@ -9,9 +9,9 @@ const StartComponent = () => {
             </p>
             <p>you can check out my socials here:</p>
             <ul>
-                <li><a target={'_blank'} href={'https://github.com/6lyxt'}>github</a></li>
-                <li><a target={'_blank'} href={'https://twitter.com/6lyxt'}>x</a></li>
-                <li><a target={'_blank'} href={'https://instagram.com/lyxt.png'}>instagram</a></li>
+                <li><a target={'_blank'} rel={'noreferrer'} href={'https://github.com/6lyxt'}>github</a></li>
+                <li><a target={'_blank'} rel={'noreferrer'} href={'https://twitter.com/6lyxt'}>x</a></li>
+                <li><a target={'_blank'} rel={'noreferrer'} href={'https://instagram.com/lyxt.png'}>instagram</a></li>
             </ul>
         </>
     );
